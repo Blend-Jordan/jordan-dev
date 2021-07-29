@@ -10,3 +10,15 @@
 input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+
+
+.search-modal__line-item {
+  background-color: #666;
+  padding: 12px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
