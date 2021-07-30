@@ -1,0 +1,111 @@
+
+<div class="specific-collection page-width">
+</div>
+<div class="specific-collection__products page-width">
+  <div class="product">
+    <img src="#">
+    <h2>A title here</h2>
+    <span class="price">$0.00</span>
+    <a href="#">Visit product</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.specific-collection.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Specific collection",
+      "label": "t:sections.specific-collection.settings.title.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.specific-collection.settings.collection.label"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 2,
+      "default": 4,
+      "label": "t:sections.specific-collection.settings.products_to_show.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "t:sections.featured-collection.settings.show_view_all.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": false,
+      "label": "t:sections.specific-collection.settings.swipe_on_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.specific-collection.settings.header.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.specific-collection.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_image_padding",
+      "default": false,
+      "label": "t:sections.specific-collection.settings.add_image_padding.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.specific-collection.settings.show_vendor.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Specific Collection"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .page-width.page-width--narrow {
+    display: none;
+  }
+  .specific-collection__products{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .product{
+    width: calc(100%/5);
+    padding-right:2rem;
+    padding-bottom:4rem;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  span{
+    width:100%;
+  }
+  .product img{
+    width:100%;
+    margin-bottom:20px;
+    display:block;
+  }
+  .button{
+    margin-top: 15px;
+  }
+  .sold-out{
+    opacity: 0.4;
+  }
+</style>
